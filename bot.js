@@ -12,6 +12,7 @@ async function getInfos() {
         for (let i = 0; i < Names.length; i++) {
             let userId = await noblox.getIdFromUsername(String(Names[i]));
             let plrInfo = await noblox.getPresences(Number(userId));
+            Console.log(plrInfo["placeId"]);
         }
     }
 }
