@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const Names = ["Synceratus", "RedactedZero", "Taysav123", "R0bustic", "CreepySins", "lxuca", "unix_system"];
 
 bot.on("ready", () => {
+    getInfos();
 });
 
 async function getInfos() {
