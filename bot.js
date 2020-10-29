@@ -3,7 +3,7 @@ const noblox = require('noblox.js');
 const client = new Discord.Client();
 const Names = ["Synceratus", "RedactedZero", "Taysav123", "R0bustic", "CreepySins", "lxuca", "unix_system"];
 
-bot.on("ready", () => {
+client.on("ready", () => {
     getInfos();
 });
 
@@ -16,4 +16,4 @@ async function getInfos() {
     }
 }
 
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
