@@ -5,13 +5,6 @@ const rNames = [Synceratus, RedactedZero, Taysav123, R0bustic, CreepySins, lxuca
 
 bot.on("ready", () => {
 
-    bot.user.setPresence({
-        game: {
-            name: "Watching over you.",
-            type: "STREAMING"
-        }
-    });
-
     while(true) {
         for(let i = 0; i < rNames.length; i++) {
             let playerInfo = await getPlayerInfo(String(rNames[i]))
