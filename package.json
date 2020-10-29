@@ -2,7 +2,7 @@
   "name": "rbxpresence-ia",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Synceratus/rbxpresence-ia.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Synceratus",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Synceratus/rbxpresence-ia/issues"
