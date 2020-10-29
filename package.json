@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Synceratus/rbxpresence-ia#readme",
   "dependencies": {
     "discord.js": "^12.4.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "noblox.js": "^3.8.0-0"
   }
 }
