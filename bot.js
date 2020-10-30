@@ -5,6 +5,13 @@ const Names = ["Synceratus", "RedactedZero", "Taysav123", "R0bustic", "CreepySin
 
 client.on("ready", () => {
     getInfos();
+    client.user.setPresence({
+        activity: {
+            name: 'over you.',
+            type: "WATCHING"
+        },
+        status: 'online'
+    })
 });
 
 async function getInfos() {
