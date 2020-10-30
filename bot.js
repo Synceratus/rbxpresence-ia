@@ -3,17 +3,6 @@ const noblox = require('noblox.js');
 const client = new Discord.Client();
 const Names = ["Synceratus", "RedactedZero", "Taysav123", "R0bustic", "CreepySins", "lxuca", "unix_system"];
 
-function login() {
-    return noblox.cookieLogin(process.env.COOKIE)
-}
-
-login()
-    .then(function() {
-        console.log('Logged in.')
-    }).catch(function(error){
-        console.log('Login error: ${error}')
-    });
-
 client.on("ready", () => {
     getInfos();
     client.user.setPresence({
