@@ -19,7 +19,7 @@ client.on("ready", () => {
         },
         status: 'online'
     })
-})
+});
 
 async function getInfos() {
     while (true) {
