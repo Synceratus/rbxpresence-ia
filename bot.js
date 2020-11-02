@@ -1,9 +1,10 @@
 const Discord = require('discord.js');
 const noblox = require('noblox.js');
+const dotenv = require('dotenv');
 const client = new Discord.Client();
 const Names = ["Synceratus", "RedactedZero", "Taysav123", "R0bustic", "CreepySins", "lxuca", "unix_system"];
 
-require('dotenv').config();
+dotenv.config();
 
 noblox.setCookie(process.env.cookie).catch(async err => {
     console.log(chalk.red('Login problems: ' + err));
