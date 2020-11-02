@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const noblox = require('noblox.js');
 const dotenv = require('dotenv');
 const client = new Discord.Client();
-const Names = ["Synceratus", "RedactedZero", "Taysav123", "R0bustic", "CreepySins", "lxuca", "unix_system"];
+const IDs = [622038343, 69814407, 161989118, 34919504, 34455029, 301532427, 13706661];
 
 dotenv.config();
 
@@ -23,9 +23,8 @@ client.on("ready", () => {
 
 async function getInfos() {
     while (true) {
-        for (let i = 0; i < Names.length; i++) {
-            let userId = await noblox.getIdFromUsername(String(Names[i]));
-            let plrInfo = await noblox.getPresences(Number(userId));
+        for (let i = 0; i < IDs.length; i++) {
+            let plrInfo = await noblox.getPresences(Number(IDs[i]));
             console.log(plrInfo["placeId"]);
         }
     }
