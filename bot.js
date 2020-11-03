@@ -26,7 +26,7 @@ async function getInfos() {
         for (let i = 0; i < Names.length; i++) {
             let userIds = await noblox.getIdFromUsername(String(Names[i]));
             if (userIds != null) {
-                let plrInfo = await noblox.getPresences(Number(userIds));
+                let plrInfo = await noblox.getPresences[Number(userIds)];
                 console.log(plrInfo["placeId"]);
             }
         }
