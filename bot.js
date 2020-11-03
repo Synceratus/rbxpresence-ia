@@ -21,16 +21,20 @@ client.on("ready", () => {
     })
 });
 
+var debounce = false;
+
 async function getInfos() {
-    while (true) {
-        for (let i = 0; i < Names.length; i++) {
-            let userIds = await noblox.getIdFromUsername(String(Names[i]));
-            if (userIds != null) {
-                let plrInfo = await noblox.getPresences([Number(userIds)]);
-                console.log(plrInfo);
+        while (debounce == false) {
+            debounce = true;
+            for (let i = 0; i < Names.length; i++) {
+                let userIds = await noblox.getIdFromUsername(String(Names[i]));
+                if (userIds != null) {
+                    let plrInfo = await noblox.getPresences([Number(userIds)]);
+                    console.log(plrInfo);
+                }
             }
+            setTimeout(debounce = false, 5000);
         }
-    }
 }
 
 client.login(process.env.BOT_TOKEN);
