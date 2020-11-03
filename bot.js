@@ -25,13 +25,12 @@ client.on("ready", () => {
 
 async function getInfos() {
         while (true) {
-            for (let i = 0; i < Names.length && debounce == false; i++) {
+            for (let i = 0; i < Names.length; i++) {
                 let userIds = await noblox.getIdFromUsername(String(Names[i]));
                 if (userIds != null) {
                     let plrInfo = await noblox.getPresences([Number(userIds)]);
                     console.log(plrInfo);
                 }
-                setTimeout(debounce = true, 1000);
             }
         }
 }
