@@ -14,7 +14,7 @@ client.on("ready", () => {
     getInfos();
     client.user.setPresence({
         activity: {
-            name: 'over you.',
+            name: 'Synceratus developing me.',
             type: "WATCHING"
         },
         status: 'online'
