@@ -37,7 +37,7 @@ async function getInfos() {
                     await wait(5000);
                 }
             }
-        await wait(60000000)
+        await wait(60000000) //togliere due zeri quando modifichi
         }
 }
 
