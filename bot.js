@@ -23,6 +23,10 @@ client.on("ready", () => {
     })
 });
 
+function wait(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
 async function getInfos() {
         while (true) {
             for (let i = 0; i < Names.length; i++) {
@@ -30,6 +34,7 @@ async function getInfos() {
                 if (userIds != null) {
                     let plrInfo = await noblox.getPresences([Number(userIds)]);
                     console.log(plrInfo);
+                    await wait(1000);
                 }
             }
         }
