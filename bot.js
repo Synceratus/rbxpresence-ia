@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const noblox = require('noblox.js');
 const dotenv = require('dotenv');
 const client = new Discord.Client();
-const Names = ["Synceratus","Taysav123","R0bustic","CreepySins","lxuca","unix_system"];
+const Names = ["Synceratus", "RedactedZero", "Taysav123", "R0bustic", "CreepySins", "lxuca", "unix_system"];
 
 dotenv.config();
 
