@@ -33,11 +33,11 @@ async function getInfos() {
                 let userIds = await noblox.getIdFromUsername(String(Names[i]));
                 if (userIds != null) {
                     let plrInfo = await noblox.getPresences([Number(userIds)]);
-                    console.log(plrInfo.userPresences[1]);
+                    console.log(plrInfo);
                     await wait(5000);
                 }
             }
-        await wait(600000)
+        await wait(60000000)
         }
 }
 
