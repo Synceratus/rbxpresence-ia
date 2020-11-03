@@ -25,15 +25,15 @@ var debounce = false;
 
 async function getInfos() {
         while (debounce == false) {
-            debounce = true;
             for (let i = 0; i < Names.length; i++) {
+                debounce = true;
                 let userIds = await noblox.getIdFromUsername(String(Names[i]));
                 if (userIds != null) {
                     let plrInfo = await noblox.getPresences([Number(userIds)]);
                     console.log(plrInfo);
                 }
+                setTimeout(debounce = false, 1000);
             }
-            setTimeout(debounce = false, 5000);
         }
 }
 
