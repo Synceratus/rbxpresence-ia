@@ -27,7 +27,7 @@ async function getInfos() {
             let userIds = await noblox.getIdFromUsername(String(Names[i]));
             if (userIds != null) {
                 let plrInfo = await noblox.getPresences([Number(userIds)]);
-                setTimeout(() => console.log(plrInfo), 1000);
+                console.log(plrInfo);
             }
         }
     }
