@@ -33,11 +33,12 @@ async function getInfos() {
                 let userIds = await noblox.getIdFromUsername(String(Names[i]));
                 if (userIds != null) {
                     let plrInfo = await noblox.getPresences([Number(userIds)]);
-                    console.log(plrInfo);
+                    const servChannel = client.channels.cache.find(channel => channel.id === "773173229284098058");
+                    servChannel.send(plrInfo);
                     await wait(5000);
                 }
             }
-        await wait(60000000) //togliere due zeri quando modifichi
+        await wait(600000);
         }
 }
 
