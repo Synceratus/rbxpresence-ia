@@ -33,8 +33,7 @@ async function getInfos() {
                 let userIds = await noblox.getIdFromUsername(String(Names[i]));
                 if (userIds != null) {
                     let plrInfo = await noblox.getPresences([Number(userIds)]);
-                    const servChannel = client.channels.cache.find(channel => channel.id === "773173229284098058");
-                    servChannel.send(plrInfo);
+                    console.log(plrInfo);
                     await wait(5000);
                 }
             }
