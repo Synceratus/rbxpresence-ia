@@ -42,7 +42,7 @@ async function getInfos() {
                     if (plrInfo["userPresences"][0]["userPresenceType"] == 2 && plrInfo["userPresences"][0]["lastLocation"] == "[SCP] Area 27v2" && result == undefined) {
                       onlinePeeps[onlinePeeps.length] = Names[i];
                       const channel = client.channels.cache.find(channel => channel.id === logChannelId)
-                      channel.send(Names[i] + " is online.  <@&594334702853292093> <@&594334610494717970>")
+                      channel.send(Names[i] + " is online on Area 27v2.  <@&594334702853292093> <@&594334610494717970>")
                     } else if (result != undefined && plrInfo["userPresences"][0]["userPresenceType"] != 2) {
                       onlinePeeps.splice(index, 1)
                       const channel = client.channels.cache.find(channel => channel.id === logChannelId)
