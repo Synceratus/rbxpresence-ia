@@ -20,6 +20,6 @@
   "dependencies": {
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
-    "noblox.js": "git+https://github.com/suufi/noblox.js.git"
+    "noblox.js": "^4.8.0"
   }
 }
