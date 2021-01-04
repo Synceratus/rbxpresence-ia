@@ -4,8 +4,7 @@ const dotenv = require('dotenv');
 const client = new Discord.Client();
 const Names = ["Synceratus", "RedactedZero", "Taysav123", "R0bustic", "CreepySins", "lxuca", "unix_system", "Reincracy", "knoflikCZ", "dragon1warrior"];
 
-var debounce = false
-var logChannelId = "773173229284098058"
+var logChannelId = "795727598880948225"
 
 
 dotenv.config();
@@ -18,7 +17,7 @@ client.on("ready", () => {
     getInfos();
     client.user.setPresence({
         activity: {
-            name: 'Syn developing me.',
+            name: '[REDACTED]',
             type: "WATCHING"
         },
         status: 'online'
@@ -42,7 +41,7 @@ async function getInfos() {
                     if (plrInfo["userPresences"][0]["userPresenceType"] == 2 && plrInfo["userPresences"][0]["lastLocation"] == "[SCP] Area 27v2" && result == undefined) {
                       onlinePeeps[onlinePeeps.length] = Names[i];
                       const channel = client.channels.cache.find(channel => channel.id === logChannelId)
-                      channel.send(Names[i] + " is online on Area 27v2.  <@&594334702853292093> <@&594334610494717970>")
+                      channel.send(Names[i] + " is online on Area 27v2. <@&795660976161554453>")
                     } else if (result != undefined && plrInfo["userPresences"][0]["userPresenceType"] != 2) {
                       onlinePeeps.splice(index, 1)
                       const channel = client.channels.cache.find(channel => channel.id === logChannelId)
