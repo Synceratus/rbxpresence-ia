@@ -2,9 +2,9 @@ const Discord = require('discord.js');
 const noblox = require('noblox.js');
 const dotenv = require('dotenv');
 const client = new Discord.Client();
-const Names = ["Synceratus", "RedactedZero", "Taysav123", "R0bustic", "CreepySins", "lxuca", "unix_system", "Reincracy", "knoflikCZ", "dragon1warrior"];
+const Names = ["name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8", "name9", "name10"];
 
-var logChannelId = "795727598880948225"
+var logChannelId = "idhere"
 
 
 dotenv.config();
@@ -17,7 +17,7 @@ client.on("ready", () => {
     getInfos();
     client.user.setPresence({
         activity: {
-            name: '[REDACTED]',
+            name: 'activitytext',
             type: "WATCHING"
         },
         status: 'online'
@@ -38,10 +38,10 @@ async function getInfos() {
                     let plrInfo = await noblox.getPresences([Number(userIds)]);
                     const result = onlinePeeps.find(element => element == Names[i])
                     const index = onlinePeeps.indexOf(Names[i])
-                    if (plrInfo["userPresences"][0]["userPresenceType"] == 2 && plrInfo["userPresences"][0]["lastLocation"] == "[SCP] Area 27v2" && result == undefined) {
+                    if (plrInfo["userPresences"][0]["userPresenceType"] == 2 && plrInfo["userPresences"][0]["lastLocation"] == "<gamename>" && result == undefined) {
                       onlinePeeps[onlinePeeps.length] = Names[i];
                       const channel = client.channels.cache.find(channel => channel.id === logChannelId)
-                      channel.send(Names[i] + " is online on Area 27v2. <@&795660976161554453>")
+                      channel.send(Names[i] + " is online on <gamename>. <@&roleid>")
                     } else if (result != undefined && plrInfo["userPresences"][0]["userPresenceType"] != 2) {
                       onlinePeeps.splice(index, 1)
                       const channel = client.channels.cache.find(channel => channel.id === logChannelId)
